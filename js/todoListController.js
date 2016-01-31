@@ -17,6 +17,10 @@ angular.module('todoList.controller', [])
     $scope.newTask = "";
   };
 
+  $scope.deleteTask = function(index) {
+    $scope.taskList.splice(index, 1)
+  };
+
 }]);
 
 
