@@ -1,1 +1,8 @@
-var todoList = angular.module('TodoList', ['ngResource']);
+(function () {
+  'use strict';
+
+  angular.module('todoList', [
+    'todoList.controller'
+  ]);
+  
+}());
