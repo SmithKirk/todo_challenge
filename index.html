@@ -4,13 +4,15 @@
     <meta charset="utf-8">
     <title>Todo List</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href-"css/bootstrap-sandstone.css"
+    <link rel="stylesheet" href-"css/bootstrap-sandstone.css">
+    <link href="bower_components/angular-xeditable/dist/css/xeditable.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="js/app.js"></script>
     <script src="js/todoListController.js"></script>
+    <script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
   </head>
 
   <body ng-controller="todoListController as todoCtrl" class="todo" class="container">
@@ -34,9 +36,9 @@
           <div ng-repeat="task in taskList" class="list-group-item">
             <label class="description" ng-class="{strike: task.done}">
               <input type="checkbox" ng-model="task.done"/>
-              {{task.description}}
+              <a href="" editable-text="task.description">{{task.description}}</a>
             </label>
-            <button ng-click="deleteTask($index)" class="btn btn-primary delete" >delete</button>
+            <button ng-click="deleteTask($index)" class="btn btn-primary"s>delete</button>
           </div>
         </div>
 
